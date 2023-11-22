@@ -7,12 +7,12 @@ from keyboards.defoult import towns_keyboard
 
 @dp.message(F.text == "Пункты сбора♻️")
 async def iac(message: types.Message):  # Information about companies
-    await message.answer("Про какие пункты сбора вы хотите узнать?")
+    await message.answer("Про какие пункты сбора вы хотите узнать?", reply_markup=towns_keyboard)
 
 
 @dp.message(F.text == "Пункты сбора")  # 2-ой вариант ввода пользоватиеля
 async def iac2(message: types.Message):
-    await message.answer("Про какие пункты сбора вы хотите узнать?")
+    await message.answer("Про какие пункты сбора вы хотите узнать?", reply_markup=towns_keyboard)
 
 
 @dp.message(F.text == "ХАНТЫ-МАНСИЙСК🌁")
