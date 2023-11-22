@@ -1,6 +1,6 @@
 from aiogram import types, F
 
-from keyboards.inline.inline_buttons import infography_keyboard
+from keyboards.inline.inline_buttons import get_infography_keyboard
 from loader import dp
 
 
