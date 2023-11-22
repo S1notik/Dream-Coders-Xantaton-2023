@@ -1,9 +1,15 @@
-async def on_startup(dp):
-    pass
+import asyncio
+import logging
+import sys
 
+
+async def on_startup():
+    from loader import dp, bot
+
+    await dp.start_polling(bot)
 
 if __name__ == "__main__":
-    from aiogram import executor
     from handlers import dp
 
-    executor.start_polling(dp, on_startup=on_startup)
+    logging.basicConfig(level=logging.INFO, stream=sys.stdout)
+    asyncio.run(on_startup())
