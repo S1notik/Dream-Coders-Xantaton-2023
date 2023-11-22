@@ -112,66 +112,84 @@ interesting_facts_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
 ])
 
 
-def get_infography_keyboard():
+# Кнопки для инфографии
+STEP1_EXTEND_CB = "extend"
+STEP1_COLLAPSE_CB = "collapse"
+STEP1_SETTINGS_CB = "settings"
 
-    # Кнопки для инфографии
-    infography_keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [
-            InlineKeyboardButton(
-                text="Батарейки",
-                callback_data="somecallback"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="Бумага",
-                callback_data="somecallback"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="Композитная упаковка",
-                callback_data="somecallback"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="Металл",
-                callback_data="somecallback"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="Пластик",
-                callback_data="somecallback"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="Стекло",
-                callback_data="somecallback"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="Экологичность упаковки",
-                callback_data="somecallback"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="Что содержит мусорное ведро?",
-                callback_data="somecallback"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="Ответственное потребление",
-                callback_data="somecallback"
-            )
-        ]
-    ], resize_keyboard=True, one_time_keyboard=True, input_field_placeholder="Choice a button", selective=True)
+keyboard = InlineKeyboardMarkup(inline_keyboard=[[
+        InlineKeyboardButton(text="Батарейки",
+                             callback_data=STEP1_EXTEND_CB)],
+    [
+        InlineKeyboardButton(text="Композитная упаковка", callback_data=STEP1_COLLAPSE_CB)],
+    [
+        InlineKeyboardButton(text="Металл", callback_data=STEP1_COLLAPSE_CB)],
+    [
+        InlineKeyboardButton(text="Пластик", callback_data=STEP1_COLLAPSE_CB)],
+    [
+        InlineKeyboardButton(text="Стекло", callback_data=STEP1_COLLAPSE_CB)],
+    [
+        InlineKeyboardButton(text="Экологичность упаковки", callback_data=STEP1_COLLAPSE_CB)],
+    [
+        InlineKeyboardButton(text="Что содержит мусорное ведро?", callback_data=STEP1_COLLAPSE_CB)],
+    [
+        InlineKeyboardButton(text="Ответственное потребление", callback_data=STEP1_COLLAPSE_CB)],
+]
+)
 
-    keyboard = types.InlineKeyboardMarkup(types_materials_inline_keyboard)
-    return keyboard
+infography_keyboard = InlineKeyboardMarkup(inline_keyboard=[
+    [
+        InlineKeyboardButton(
+            text="Батарейки",
+            callback_data="bat",
+        )
+    ],
+    [
+        InlineKeyboardButton(
+            text="Бумага",
+            callback_data="paper"
+        )
+    ],
+    [
+        InlineKeyboardButton(
+            text="Композитная упаковка",
+            callback_data="somecallback"
+        )
+    ],
+    [
+        InlineKeyboardButton(
+            text="Металл",
+            callback_data="mettal"
+        )
+    ],
+    [
+        InlineKeyboardButton(
+            text="Пластик",
+            callback_data="plast"
+        )
+    ],
+    [
+        InlineKeyboardButton(
+            text="Стекло",
+            callback_data="botter"
+        )
+    ],
+    [
+        InlineKeyboardButton(
+            text="Экологичность упаковки",
+            callback_data="a"
+        )
+    ],
+    [
+        InlineKeyboardButton(
+            text="Что содержит мусорное ведро?",
+            callback_data="b"
+        )
+    ],
+    [
+        InlineKeyboardButton(
+            text="Ответственное потребление",
+            callback_data="v")
+    ]
+], resize_keyboard=True, one_time_keyboard=True, input_field_placeholder="Choice a button", selective=True)
 
