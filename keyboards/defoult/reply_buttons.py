@@ -74,3 +74,4 @@ education_keyboard = ReplyKeyboardMarkup(keyboard=[
 ], resize_keyboard=True, one_time_keyboard=True, input_field_placeholder="Choice a button", selective=True)
 
 
+
