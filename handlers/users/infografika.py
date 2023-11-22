@@ -1,7 +1,5 @@
 from aiogram import types, F
-from loader import dp, bot
-from aiogram.types import InputFile, ContentType, FSInputFile
-from aiogram.methods import SendPhoto
+from loader import dp
 
 
 @dp.message(F.text)
