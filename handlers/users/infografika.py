@@ -11,8 +11,7 @@ async def infografika(message: types.Message):
     elif message.text == "Металл":
         await message.answer_photo("AgACAgIAAxkBAAPWZV4XPXa214zyQL2pz-io3jo5EdoAAhTSMRvhWfFKGNT50tu4XlMBAAMCAANzAAMzBA")
     elif message.text == "Пластик":
-         await message.answer_photo("AgACAgIAAxkBAAPYZV4Xz6CCihsJT1TscsuOzH"
-                                    "KkzlMAAhXSMRvhWfFKmZxSPBFCbx8BAAMCAANzAAMzBA")
+        await message.answer_photo("AgACAgIAAxkBAAPYZV4Xz6CCihsJT1TscsuOzHKkzlMAAhXSMRvhWfFKmZxSPBFCbx8BAAMCAANzAAMzBA")
     elif message.text == "Стекло":
         await message.answer_photo("AgACAgIAAxkBAAPaZV4YBuDHB8O4wRr15hUjSjukjosAAhjSMRvhWfFKtIZOrpWMF1kBAAMCAANzAAMzBA")
     elif message.text == "Экологичность упаковки":
