@@ -107,3 +107,54 @@ interesting_facts_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
     ]
 ])
 
+
+
+# Кнопки для инфографии
+infography_keyboard = InlineKeyboardMarkup(keyboard=[
+    [
+        InlineKeyboardButton(
+            text="Батарейки"
+        )
+    ],
+    [
+        InlineKeyboardButton(
+            text="Бумага"
+        )
+    ],
+    [
+        InlineKeyboardButton(
+            text="Композитная упаковка"
+        )
+    ],
+    [
+        InlineKeyboardButton(
+            text="Металл"
+        )
+    ],
+    [
+        InlineKeyboardButton(
+            text="Пластик"
+        )
+    ],
+    [
+        InlineKeyboardButton(
+            text="Стекло"
+        )
+    ],
+    [
+        InlineKeyboardButton(
+            text="Экологичность упаковки"
+        )
+    ],
+    [
+        InlineKeyboardButton(
+            text="Что содержит мусорное ведро?"
+        )
+    ],
+    [
+        InlineKeyboardButton(
+            text="Ответственное потребление"
+        )
+    ]
+], resize_keyboard=True, one_time_keyboard=True, input_field_placeholder="Choice a button", selective=True)
+
