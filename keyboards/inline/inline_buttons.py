@@ -110,7 +110,7 @@ interesting_facts_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
 
 # Кнопки для инфографии
-infography_keyboard = InlineKeyboardMarkup(keyboard=[
+infography_keyboard = InlineKeyboardMarkup(inline_keyboard=[
     [
         InlineKeyboardButton(
             text="Батарейки"
