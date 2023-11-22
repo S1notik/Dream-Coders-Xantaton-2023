@@ -6,7 +6,7 @@ from loader import dp
 
 @dp.message(F.text == "Инфографика📑")
 async def infografika(message: types.Message):
-    await message.answer("Здесь вы можете узнать о переработке разных материалов")
+    await message.answer("Здесь вы можете узнать о переработке разных материалов", reply_markup=get_infography_keyboard())
 
 @dp.message(F.text == "Батарейки")
 async def battery(message: types.Message):
