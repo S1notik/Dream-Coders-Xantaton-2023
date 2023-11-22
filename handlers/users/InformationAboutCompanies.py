@@ -2,6 +2,7 @@ from aiogram.enums import ParseMode
 from loader import dp, bot
 from aiogram import F, types
 import sqlite3
+from keyboards.defoult import towns_keyboard
 
 
 @dp.message(F.text == "Пункты сбора♻️")
@@ -38,7 +39,7 @@ async def xmao(message: types.Message):
                          f"<ins>Ежедневно:</ins> {count_table_3}\n"
                          f"<ins>Обед:</ins> {count_table_4}\n"
                          f"<ins>Тех. перерывы:</ins> {count_table_5}\n",
-                         parse_mode=ParseMode.HTML
+                         parse_mode=ParseMode.HTML, reply_markup=towns_keyboard
                          )
 
 
@@ -67,7 +68,7 @@ async def xmao(message: types.Message):
                          f"<ins>Ежедневно:</ins> {count_table_3}\n"
                          f"<ins>Обед:</ins> {count_table_4}\n"
                          f"<ins>Тех. перерывы:</ins> {count_table_5}\n",
-                         parse_mode=ParseMode.HTML
+                         parse_mode=ParseMode.HTML, reply_markup=towns_keyboard
                          )
 
 
@@ -95,7 +96,7 @@ async def xmao(message: types.Message):
                          f"<ins>Ежедневно:</ins> {count_table_3}\n"
                          f"<ins>Обед:</ins> {count_table_4}\n"
                          f"<ins>Тех. перерывы:</ins> {count_table_5}\n",
-                         parse_mode=ParseMode.HTML
+                         parse_mode=ParseMode.HTML, reply_markup=towns_keyboard
                          )
 
 
@@ -123,7 +124,7 @@ async def xmao(message: types.Message):
                          f"<ins>Ежедневно:</ins> {count_table_3}\n"
                          f"<ins>Обед:</ins> {count_table_4}\n"
                          f"<ins>Тех. перерывы:</ins> {count_table_5}\n",
-                         parse_mode=ParseMode.HTML
+                         parse_mode=ParseMode.HTML, reply_markup=towns_keyboard
                          )
 
 
@@ -151,7 +152,7 @@ async def xmao(message: types.Message):
                          f"<ins>Ежедневно:</ins> {count_table_3}\n"
                          f"<ins>Обед:</ins> {count_table_4}\n"
                          f"<ins>Тех. перерывы:</ins> {count_table_5}\n",
-                         parse_mode=ParseMode.HTML
+                         parse_mode=ParseMode.HTML, reply_markup=towns_keyboard
                          )
 
 
@@ -179,5 +180,5 @@ async def xmao(message: types.Message):
                          f"<ins>Ежедневно:</ins> {count_table_3}\n"
                          f"<ins>Обед:</ins> {count_table_4}\n"
                          f"<ins>Тех. перерывы:</ins> {count_table_5}\n",
-                         parse_mode=ParseMode.HTML
+                         parse_mode=ParseMode.HTML, reply_markup=towns_keyboard
                          )
