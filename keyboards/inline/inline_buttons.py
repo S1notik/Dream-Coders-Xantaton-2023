@@ -1,4 +1,8 @@
+import types
+
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
+
 
 # Кнопки для полезных ссылок
 useful_links_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
@@ -108,53 +112,66 @@ interesting_facts_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
 ])
 
 
+def get_infography_keyboard():
 
-# Кнопки для инфографии
-infography_keyboard = InlineKeyboardMarkup(inline_keyboard=[
-    [
-        InlineKeyboardButton(
-            text="Батарейки"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="Бумага"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="Композитная упаковка"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="Металл"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="Пластик"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="Стекло"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="Экологичность упаковки"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="Что содержит мусорное ведро?"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="Ответственное потребление"
-        )
-    ]
-], resize_keyboard=True, one_time_keyboard=True, input_field_placeholder="Choice a button", selective=True)
+    # Кнопки для инфографии
+    infography_keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [
+            InlineKeyboardButton(
+                text="Батарейки",
+                callback_data="somecallback"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="Бумага",
+                callback_data="somecallback"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="Композитная упаковка",
+                callback_data="somecallback"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="Металл",
+                callback_data="somecallback"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="Пластик",
+                callback_data="somecallback"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="Стекло",
+                callback_data="somecallback"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="Экологичность упаковки",
+                callback_data="somecallback"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="Что содержит мусорное ведро?",
+                callback_data="somecallback"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="Ответственное потребление",
+                callback_data="somecallback"
+            )
+        ]
+    ], resize_keyboard=True, one_time_keyboard=True, input_field_placeholder="Choice a button", selective=True)
+
+    keyboard = types.InlineKeyboardMarkup(types_materials_inline_keyboard)
+    return keyboard
 
