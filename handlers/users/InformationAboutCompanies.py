@@ -16,7 +16,7 @@ async def iac2(message: types.Message):
 
 
 @dp.message(F.text == "ХАНТЫ-МАНСИЙСК🌁")
-async def xmao(message: types.Message):
+async def xma(message: types.Message):
     con = sqlite3.connect("data/database/information_about_companies")
     # Создание курсора
     cur = con.cursor()
@@ -44,7 +44,7 @@ async def xmao(message: types.Message):
 
 
 @dp.message(F.text == "Ханты-Мансийск")  # 2-ой вариант ввода пользоватиеля
-async def xmao(message: types.Message):
+async def xma1(message: types.Message):
     con = sqlite3.connect("data/database/information_about_companies")
     # Создание курсора
     cur = con.cursor()
@@ -73,7 +73,7 @@ async def xmao(message: types.Message):
 
 
 @dp.message(F.text == "СУРГУТ🌁")
-async def xmao(message: types.Message):
+async def surg(message: types.Message):
     con = sqlite3.connect("data/database/information_about_companies")
     # Создание курсора
     cur = con.cursor()
@@ -101,7 +101,7 @@ async def xmao(message: types.Message):
 
 
 @dp.message(F.text == "Сургут")  # 2-ой вариант ввода пользоватиеля
-async def xmao(message: types.Message):
+async def surg1(message: types.Message):
     con = sqlite3.connect("data/database/information_about_companies")
     # Создание курсора
     cur = con.cursor()
@@ -129,7 +129,7 @@ async def xmao(message: types.Message):
 
 
 @dp.message(F.text == "НИЖНЕВАРТОВСК🌁")
-async def xmao(message: types.Message):
+async def vart(message: types.Message):
     con = sqlite3.connect("data/database/information_about_companies")
     # Создание курсора
     cur = con.cursor()
@@ -157,7 +157,7 @@ async def xmao(message: types.Message):
 
 
 @dp.message(F.text == "Нижневартовск")  # 2-ой вариант ввода пользоватиеля
-async def xmao(message: types.Message):
+async def vart1(message: types.Message):
     con = sqlite3.connect("data/database/information_about_companies")
     # Создание курсора
     cur = con.cursor()
