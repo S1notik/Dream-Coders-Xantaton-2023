@@ -7,17 +7,16 @@ import sqlite3
 
 @dp.message(CommandStart())
 async def start(message: types.Message):
-    # con = sqlite3.connect("data/database/information_about_companies")
-    # # Создание курсора
-    # cur = con.cursor()
-    # # cur2 = con.cursor()
-    # # result = cur2.execute("""SELECT id FROM users WHERE name = ?""", (str(message.from_user.username)))
-    # # if result != message.from_user.id:
-    # # Выполнение запроса и получение всех результатов
-    # cur.execute("""INSERT INTO users
-    # VALUES(?, ?)""", (message.from_user.id, message.from_user.username))
-    # con.commit()
-    # con.close()
+    con = sqlite3.connect("data/database/information_about_companies")
+    # Создание курсора
+    cur = con.cursor()
+    cur2 = con.cursor()
+    result = cur.execute("""SELECT id FROM users WHERE name = ?""", (str(message.from_user.username), ))
+    if result.fetchone() is None:
+        cur2.execute("""INSERT INTO users
+        VALUES(?, ?)""", (message.from_user.id, message.from_user.username))
+    con.commit()
+    con.close()
     await message.answer("Привет! Я - Телеграм-бот, который поможет тебе узнать больше про сборы и переработки отходов в Югре.",
                          reply_markup=start_keyboard)
 
