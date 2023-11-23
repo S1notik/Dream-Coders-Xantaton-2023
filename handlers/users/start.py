@@ -17,7 +17,7 @@ async def start(message: types.Message):
         VALUES(?, ?)""", (message.from_user.id, message.from_user.username))
     con.commit()
     con.close()
-    await message.answer("Привет! Я - Телеграм-бот, который поможет тебе узнать больше про сборы и переработки отходов в Югре.",
+    await message.answer(f"Привет, {message.from_user.username}! Я - Телеграм-бот, который поможет тебе узнать больше про сборы и переработки отходов в Югре.",
                          reply_markup=start_keyboard)
 
 

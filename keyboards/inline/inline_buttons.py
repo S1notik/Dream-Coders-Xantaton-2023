@@ -260,6 +260,29 @@ question2_keyboard = InlineKeyboardMarkup(inline_keyboard=question2_buttons,
                                            input_field_placeholder="Choice a button",
                                            selective=True)
 
+# Вопрос третий
+question2_buttons = [
+        [
+            InlineKeyboardButton(
+                text="Можно, и мыть необязательно",
+                callback_data="answer1_question2_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Можно, и мыть необязательно",
+                callback_data="answer2_question2_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Конечно, только предварительно его надо помыть",
+                callback_data="answer3_question2_quiz")
+        ]
+    ]
+question2_keyboard = InlineKeyboardMarkup(inline_keyboard=question2_buttons,
+                                           resize_keyboard=True,
+                                           one_time_keyboard=True,
+                                           input_field_placeholder="Choice a button",
+                                           selective=True)
 
 
 
