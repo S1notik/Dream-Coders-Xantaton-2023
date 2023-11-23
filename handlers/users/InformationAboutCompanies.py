@@ -21,16 +21,19 @@ async def xma(message: types.Message):
     # Создание курсора
     cur = con.cursor()
     # Выполнение запроса и получение всех результатов
-    result = cur.execute("""SELECT address, time_work, dinner, TechBreak FROM info WHERE name_city = ?""", ('Ханты-Мансийск', ))
+    result = cur.execute("""SELECT address, time_work, dinner, TechBreak, number_phone FROM info WHERE name_city = ?""",
+                         ('Ханты-Мансийск',))
     count_table_2 = ""
     count_table_3 = ""
     count_table_4 = ""
     count_table_5 = ""
+    count_table_6 = ""
     for row in result:
         count_table_2 = row[0]
         count_table_3 = row[1]
         count_table_4 = row[2]
         count_table_5 = row[3]
+        count_table_6 = row[4]
     con.commit()
     con.close()
 
@@ -38,7 +41,8 @@ async def xma(message: types.Message):
     await message.answer(f"<ins>Адресс:</ins> г. Ханты-Мансийск, {count_table_2}\n"
                          f"<ins>Ежедневно:</ins> {count_table_3}\n"
                          f"<ins>Обед:</ins> {count_table_4}\n"
-                         f"<ins>Тех. перерывы:</ins> {count_table_5}\n",
+                         f"<ins>Тех. перерывы:</ins> {count_table_5}\n"
+                         f"<ins>Номер телефона:</ins> {count_table_6}",
                          parse_mode=ParseMode.HTML, reply_markup=towns_keyboard
                          )
 
@@ -49,17 +53,19 @@ async def xma1(message: types.Message):
     # Создание курсора
     cur = con.cursor()
     # Выполнение запроса и получение всех результатов
-    result = cur.execute("""SELECT address, time_work, dinner, TechBreak FROM info WHERE name_city = ?""",
+    result = cur.execute("""SELECT address, time_work, dinner, TechBreak, number_phone FROM info WHERE name_city = ?""",
                          ('Ханты-Мансийск',))
     count_table_2 = ""
     count_table_3 = ""
     count_table_4 = ""
     count_table_5 = ""
+    count_table_6 = ""
     for row in result:
         count_table_2 = row[0]
         count_table_3 = row[1]
         count_table_4 = row[2]
         count_table_5 = row[3]
+        count_table_6 = row[4]
     con.commit()
     con.close()
 
@@ -67,7 +73,8 @@ async def xma1(message: types.Message):
     await message.answer(f"<ins>Адресс:</ins> г. Ханты-Мансийск, {count_table_2}\n"
                          f"<ins>Ежедневно:</ins> {count_table_3}\n"
                          f"<ins>Обед:</ins> {count_table_4}\n"
-                         f"<ins>Тех. перерывы:</ins> {count_table_5}\n",
+                         f"<ins>Тех. перерывы:</ins> {count_table_5}\n"
+                         f"<ins>Номер телефона:</ins> {count_table_6}",
                          parse_mode=ParseMode.HTML, reply_markup=towns_keyboard
                          )
 
@@ -78,16 +85,18 @@ async def surg(message: types.Message):
     # Создание курсора
     cur = con.cursor()
     # Выполнение запроса и получение всех результатов
-    result = cur.execute("""SELECT address, time_work, dinner, TechBreak FROM info WHERE name_city = ?""", ('Сургут', ))
+    result = cur.execute("""SELECT address, time_work, dinner, TechBreak, number_phone FROM info WHERE name_city = ?""", ('Сургут',))
     count_table_2 = ""
     count_table_3 = ""
     count_table_4 = ""
     count_table_5 = ""
+    count_table_6 = ""
     for row in result:
         count_table_2 = row[0]
         count_table_3 = row[1]
         count_table_4 = row[2]
         count_table_5 = row[3]
+        count_table_6 = row[4]
     con.commit()
     con.close()
 
@@ -95,7 +104,8 @@ async def surg(message: types.Message):
     await message.answer(f"<ins>Адресс:</ins> г. Сургут, {count_table_2}\n"
                          f"<ins>Ежедневно:</ins> {count_table_3}\n"
                          f"<ins>Обед:</ins> {count_table_4}\n"
-                         f"<ins>Тех. перерывы:</ins> {count_table_5}\n",
+                         f"<ins>Тех. перерывы:</ins> {count_table_5}\n"
+                         f"<ins>Номер телефона:</ins> {count_table_6}",
                          parse_mode=ParseMode.HTML, reply_markup=towns_keyboard
                          )
 
@@ -106,16 +116,18 @@ async def surg1(message: types.Message):
     # Создание курсора
     cur = con.cursor()
     # Выполнение запроса и получение всех результатов
-    result = cur.execute("""SELECT address, time_work, dinner, TechBreak FROM info WHERE name_city = ?""", ('Сургут', ))
+    result = cur.execute("""SELECT address, time_work, dinner, TechBreak, number_phone FROM info WHERE name_city = ?""", ('Сургут', ))
     count_table_2 = ""
     count_table_3 = ""
     count_table_4 = ""
     count_table_5 = ""
+    count_table_6 = ""
     for row in result:
         count_table_2 = row[0]
         count_table_3 = row[1]
         count_table_4 = row[2]
         count_table_5 = row[3]
+        count_table_6 = row[4]
     con.commit()
     con.close()
 
@@ -123,7 +135,8 @@ async def surg1(message: types.Message):
     await message.answer(f"<ins>Адресс:</ins> г. Сургут, {count_table_2}\n"
                          f"<ins>Ежедневно:</ins> {count_table_3}\n"
                          f"<ins>Обед:</ins> {count_table_4}\n"
-                         f"<ins>Тех. перерывы:</ins> {count_table_5}\n",
+                         f"<ins>Тех. перерывы:</ins> {count_table_5}\n"
+                         f"<ins>Номер телефона:</ins> {count_table_6}",
                          parse_mode=ParseMode.HTML, reply_markup=towns_keyboard
                          )
 
@@ -134,16 +147,19 @@ async def vart(message: types.Message):
     # Создание курсора
     cur = con.cursor()
     # Выполнение запроса и получение всех результатов
-    result = cur.execute("""SELECT address, time_work, dinner, TechBreak FROM info WHERE name_city = ?""", ('Нижневартовск', ))
+    result = cur.execute("""SELECT address, time_work, dinner, TechBreak, number_phone FROM info WHERE name_city = ?""",
+                         ('Нижневартовск',))
     count_table_2 = ""
     count_table_3 = ""
     count_table_4 = ""
     count_table_5 = ""
+    count_table_6 = ""
     for row in result:
         count_table_2 = row[0]
         count_table_3 = row[1]
         count_table_4 = row[2]
         count_table_5 = row[3]
+        count_table_6 = row[4]
     con.commit()
     con.close()
 
@@ -151,7 +167,8 @@ async def vart(message: types.Message):
     await message.answer(f"<ins>Адресс:</ins> г. Нижневартовск, {count_table_2}\n"
                          f"<ins>Ежедневно:</ins> {count_table_3}\n"
                          f"<ins>Обед:</ins> {count_table_4}\n"
-                         f"<ins>Тех. перерывы:</ins> {count_table_5}\n",
+                         f"<ins>Тех. перерывы:</ins> {count_table_5}\n"
+                         f"<ins>Номер телефона:</ins> {count_table_6}",
                          parse_mode=ParseMode.HTML, reply_markup=towns_keyboard
                          )
 
@@ -162,16 +179,18 @@ async def vart1(message: types.Message):
     # Создание курсора
     cur = con.cursor()
     # Выполнение запроса и получение всех результатов
-    result = cur.execute("""SELECT address, time_work, dinner, TechBreak FROM info WHERE name_city = ?""", ('Нижневартовск', ))
+    result = cur.execute("""SELECT address, time_work, dinner, TechBreak, number_phone FROM info WHERE name_city = ?""", ('Нижневартовск', ))
     count_table_2 = ""
     count_table_3 = ""
     count_table_4 = ""
     count_table_5 = ""
+    count_table_6 = ""
     for row in result:
         count_table_2 = row[0]
         count_table_3 = row[1]
         count_table_4 = row[2]
         count_table_5 = row[3]
+        count_table_6 = row[4]
     con.commit()
     con.close()
 
@@ -179,6 +198,7 @@ async def vart1(message: types.Message):
     await message.answer(f"<ins>Адресс:</ins> г. Нижневартовск, {count_table_2}\n"
                          f"<ins>Ежедневно:</ins> {count_table_3}\n"
                          f"<ins>Обед:</ins> {count_table_4}\n"
-                         f"<ins>Тех. перерывы:</ins> {count_table_5}\n",
+                         f"<ins>Тех. перерывы:</ins> {count_table_5}\n"
+                         f"<ins>Номер телефона:</ins> {count_table_6}",
                          parse_mode=ParseMode.HTML, reply_markup=towns_keyboard
                          )
