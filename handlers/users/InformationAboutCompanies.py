@@ -115,7 +115,7 @@ async def surg(message: types.Message):
     con.close()
 
     await bot.send_location(message.from_user.id, 61.257621474483486, 73.45676568947817)
-    await message.answer(f"<ins>Адресс:</ins> г. Ханты-Мансийск, {count_table_2}\n"
+    await message.answer(f"<ins>Адресс:</ins> г. Сургут, {count_table_2}\n"
                          f"<ins>Ежедневно:</ins> {count_table_3}\n"
                          f"<ins>Обед:</ins> {count_table_4}\n"
                          f"<ins>Тех. перерывы:</ins> {count_table_5}\n"
@@ -151,7 +151,7 @@ async def surg1(message: types.Message):
     con.close()
 
     await bot.send_location(message.from_user.id, 61.257621474483486, 73.45676568947817)
-    await message.answer(f"<ins>Адресс:</ins> г. Ханты-Мансийск, {count_table_2}\n"
+    await message.answer(f"<ins>Адресс:</ins> г. Сургут, {count_table_2}\n"
                          f"<ins>Ежедневно:</ins> {count_table_3}\n"
                          f"<ins>Обед:</ins> {count_table_4}\n"
                          f"<ins>Тех. перерывы:</ins> {count_table_5}\n"
@@ -188,7 +188,7 @@ async def vart(message: types.Message):
     con.close()
 
     await bot.send_location(message.from_user.id, 60.945131, 76.574973)
-    await message.answer(f"<ins>Адресс:</ins> г. Ханты-Мансийск, {count_table_2}\n"
+    await message.answer(f"<ins>Адресс:</ins> г. Нижневартовск, {count_table_2}\n"
                          f"<ins>Ежедневно:</ins> {count_table_3}\n"
                          f"<ins>Обед:</ins> {count_table_4}\n"
                          f"<ins>Тех. перерывы:</ins> {count_table_5}\n"
@@ -224,7 +224,7 @@ async def vart1(message: types.Message):
     con.close()
 
     await bot.send_location(message.from_user.id, 60.945131, 76.574973)
-    await message.answer(f"<ins>Адресс:</ins> г. Ханты-Мансийск, {count_table_2}\n"
+    await message.answer(f"<ins>Адресс:</ins> г. Нижневартовск, {count_table_2}\n"
                          f"<ins>Ежедневно:</ins> {count_table_3}\n"
                          f"<ins>Обед:</ins> {count_table_4}\n"
                          f"<ins>Тех. перерывы:</ins> {count_table_5}\n"
