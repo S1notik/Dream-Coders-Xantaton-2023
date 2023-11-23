@@ -2,12 +2,22 @@ from aiogram.filters import CommandStart
 from loader import dp
 from keyboards.defoult.reply_buttons import start_keyboard
 from aiogram import types, F
+import sqlite3
 
 
 @dp.message(CommandStart())
 async def start(message: types.Message):
+    con = sqlite3.connect("data/database/information_about_companies")
+    # Создание курсора
+    cur = con.cursor()
+    # Выполнение запроса и получение всех результатов
+    cur.execute("""INSERT INTO users
+    VALUES(?, ?)""", (message.from_user.id, message.from_user.username))
+    con.commit()
+    con.close()
     await message.answer("Привет! Я - Телеграм-бот, который поможет тебе узнать больше про сборы и переработки отходов в Югре.",
                          reply_markup=start_keyboard)
+
 
 # Перемещение в гланое меню
 @dp.message(F.text == "В главное меню⤵️")
