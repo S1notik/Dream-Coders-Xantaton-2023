@@ -1,8 +1,21 @@
+import csv
 import requests
 from aiogram import F, types
-from loader import dp, bot
+from loader import dp
 import os
 
+# all_posts = []
+#
+#
+# def file_writer(all_posts):
+#     with open("posts.csv", 'w') as file:
+#         a_pen = csv.writer(file)
+#         a_pen.writerow(("body", "url"))
+#         for post in all_posts:
+#             a_pen.writerow((post))
+#
+#
+# file_writer(all_posts)
 
 
 @dp.message(F.text == "Посты")
@@ -25,7 +38,4 @@ async def pars(message: types.Message):
     data = response.json()
     for item in data['response']['items']:
         if item['post_type'] == 'post':
-            try:
-                await message.answer(item['text'])
-            except:
-                pass
+            await message.answer(item['text'])

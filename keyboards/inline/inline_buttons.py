@@ -103,6 +103,21 @@ types_materials_inline_buttons = [
 types_materials_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=types_materials_inline_buttons)
 
 
+# Кнопки для интересных фактов
+link_for_post_inline_buttons = [
+        [
+            InlineKeyboardButton(
+            text="Все новости здесь⬇️",
+            url="https://vk.com/eco4u2"
+        )
+        ]
+    ]
+link_for_post_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=link_for_post_inline_buttons,
+                                resize_keyboard=True,
+                                one_time_keyboard=True,
+                                input_field_placeholder="Choice a button",
+                                selective=True)
+
 
 # Кнопки для интересных фактов
 interesting_facts_inline_buttons = [
