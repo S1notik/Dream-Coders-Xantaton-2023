@@ -3,6 +3,7 @@ from .inline_buttons import useful_links_inline_keyboard
 from .inline_buttons import interesting_facts_inline_keyboard
 from .inline_buttons import infography_keyboard
 from .inline_buttons import ecolesson_inline_keyboard
+from .inline_buttons import link_for_post_inline_keyboard
 from .inline_buttons import question1_keyboard
 from .inline_buttons import question2_keyboard
 '''from .inline_buttons import question3_keyboard

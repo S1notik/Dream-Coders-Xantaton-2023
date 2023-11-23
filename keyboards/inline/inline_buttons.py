@@ -210,11 +210,10 @@ infography_keyboard = InlineKeyboardMarkup(inline_keyboard=quetion1_buttons,
 
 
 
-
 # Кнопки для вопросов теста---------
 
 # Вопрос первый
-'''question1_buttons = [
+question1_buttons = [
         [
             InlineKeyboardButton(
                 text="Материал упаковки может быть переработан или упаковка частично/полностью сделана из вторсырья",
@@ -259,10 +258,13 @@ question2_keyboard = InlineKeyboardMarkup(inline_keyboard=question2_buttons,
                                            resize_keyboard=True,
                                            one_time_keyboard=True,
                                            input_field_placeholder="Choice a button",
-                                           selective=True)'''
+                                           selective=True)
 
 
 
+
+
+'''
 question1_buttons = []
 question2_buttons = []
 
@@ -291,19 +293,4 @@ for i in range(2):
                 text=answers[2],
                 callback_data="answer3_question" + str(i) + "_quiz")
         ]
-    ]
-
-
-
-
-question1_keyboard = InlineKeyboardMarkup(inline_keyboard=question1_buttons,
-                                           resize_keyboard=True,
-                                           one_time_keyboard=True,
-                                           input_field_placeholder="Choice a button",
-                                           selective=True)
-
-question2_keyboard = InlineKeyboardMarkup(inline_keyboard=question2_buttons,
-                                           resize_keyboard=True,
-                                           one_time_keyboard=True,
-                                           input_field_placeholder="Choice a button",
-                                           selective=True)
+    ]'''
