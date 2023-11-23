@@ -10,10 +10,9 @@ async def start(message: types.Message):
     con = sqlite3.connect("data/database/information_about_companies")
     # Создание курсора
     cur = con.cursor()
-    cur2 = con.cursor()
     result = cur.execute("""SELECT id FROM users WHERE name = ?""", (str(message.from_user.username), ))
     if result.fetchone() is None:
-        cur2.execute("""INSERT INTO users
+        cur.execute("""INSERT INTO users
         VALUES(?, ?)""", (message.from_user.id, message.from_user.username))
     con.commit()
     con.close()
