@@ -8,7 +8,7 @@ from loader import dp
 
 @dp.message(F.text == "Виды сырья🗑️")
 async def types_materials(message: types.Message):
-    await message.answer("♻️<b>Ниже вы можете ознакомиться с <ins>правилами приёма</ins> различных отходов:</b>", parse_mode=ParseMode.HTML, reply_markup=types_materials_inline_keyboard)
+    await message.answer("♻️<b>Ниже вы можете ознакомиться с <ins>правилами приёма</ins> различных отходов:  </b>", parse_mode=ParseMode.HTML, reply_markup=types_materials_inline_keyboard)
 
 
 @dp.callback_query(F.data == "glass_bottles_and_jars_typematerial")
