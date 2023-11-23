@@ -5,6 +5,8 @@ from .education import dp
 from .types_materials import dp
 from .infografika import dp
 from .interesting_facts import dp
+from .five_reason_sorting import dp
+from .error import dp
 
 
 __all__ = ["dp"]
