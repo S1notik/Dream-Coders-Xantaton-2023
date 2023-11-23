@@ -151,6 +151,11 @@ infography_buttons = [
         ],
         [
             InlineKeyboardButton(
+                text="Бумага",
+                callback_data="paper_infography")
+        ],
+        [
+            InlineKeyboardButton(
                 text="Композитная упаковка",
                 callback_data="сomposite_package_infography")
         ],
@@ -173,6 +178,16 @@ infography_buttons = [
             InlineKeyboardButton(
                 text="Экологичность упаковки",
                 callback_data="environmental_friendliness_of_packaging_infography")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Что содержит мусорное ведро?",
+                callback_data="what_is_contain_bin_infography")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Ответственное потребление",
+                callback_data="responsible_consumption_infography")
         ]
     ]
 infography_keyboard = InlineKeyboardMarkup(inline_keyboard=infography_buttons,
