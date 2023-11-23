@@ -176,6 +176,7 @@ interesting_facts_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
     keyboard = types.InlineKeyboardMarkup(types_materials_inline_keyboard)
     return keyboard'''
 
+
 def get_infography_keyboard():
 
     # Кнопки для инфографии

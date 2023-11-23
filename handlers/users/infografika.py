@@ -8,25 +8,31 @@ from loader import dp
 async def infografika(message: types.Message):
     await message.answer("Здесь вы можете узнать о переработке разных материалов", reply_markup=infography_builder.as_markup())
 
+
 @dp.callback_query(F.data == "battery_infography")
 async def battery(callback: types.CallbackQuery):
     await callback.message.answer_photo("AgACAgIAAxkBAAPEZV4UbksK2D8JqkjISv0GfxGHjyMAAvzRMRvhWfFKEo1qNoy4V5YBAAMCAANzAAMzBA")
+
 
 @dp.callback_query(F.data == "сomposite_package_infography")
 async def сomposite_package(callback: types.CallbackQuery):
     await callback.message.answer_photo("AgACAgIAAxkBAAPSZV4WlLjLAcdBTD1rgVJrNL1dhDoAAg7SMRvhWfFKzblwFjsP9pUBAAMCAANzAAMzBA")
 
+
 @dp.callback_query(F.data == "metal_infography")
 async def metal(callback: types.CallbackQuery):
     await callback.message.answer_photo("AgACAgIAAxkBAAPWZV4XPXa214zyQL2pz-io3jo5EdoAAhTSMRvhWfFKGNT50tu4XlMBAAMCAANzAAMzBA")
+
 
 @dp.callback_query(F.data == "plastic_infography")
 async def plastic(callback: types.CallbackQuery):
     await callback.message.answer_photo("AgACAgIAAxkBAAPYZV4Xz6CCihsJT1TscsuOzHKkzlMAAhXSMRvhWfFKmZxSPBFCbx8BAAMCAANzAAMzBA")
 
+
 @dp.callback_query(F.data == "glass_infography")
 async def glass(callback: types.CallbackQuery):
     await callback.message.answer_photo("AgACAgIAAxkBAAPaZV4YBuDHB8O4wRr15hUjSjukjosAAhjSMRvhWfFKtIZOrpWMF1kBAAMCAANzAAMzBA")
+
 
 @dp.callback_query(F.data == "environmental_friendliness_of_packaging_infography")
 async def environmental_friendliness_of_packaging(callback: types.CallbackQuery):
