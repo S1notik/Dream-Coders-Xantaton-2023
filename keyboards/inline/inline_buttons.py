@@ -36,210 +36,97 @@ useful_links_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
 
 # Кнопки для видов сырья
-types_materials_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
-    [
-        InlineKeyboardButton(
-            text="Стеклянные бутылки и банки"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="Макулатура"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="Пластиковые ящики ПНД"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="Батарейки"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="Канистры ПНД, ПВД"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="Стретч-пленка ПВД"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="Пленка ПВД"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="Крышки ПНД, ПВД, ПП"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="Белые ПЭТ-бутылки от напитков"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="Пакеты фасовочные и пакеты-майки ПНД, ПВД"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="ПЭТ-бутылки от напитков и растительного масла"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            text="Алюминиевые банки"
-        )
+types_materials_inline_buttons = [
+        [
+            InlineKeyboardButton(
+                text="Стеклянные бутылки и банки",
+                callback_data="glass_bottles_and_jars_typematerial"),
+            InlineKeyboardButton(
+                text="Макулатура",
+                callback_data="waste_paper_typematerial"),
+            InlineKeyboardButton(
+                text="Пластиковые ящики ПНД",
+                callback_data="HDPE_plastic_boxes_typematerial"),
+            InlineKeyboardButton(
+                text="Батарейки",
+                callback_data="batteries_typematerial"),
+            InlineKeyboardButton(
+                text="Канистры ПНД, ПВД",
+                callback_data="HDPE_LDPE_canisters_typematerial"),
+            InlineKeyboardButton(
+                text="Стретч-пленка ПВД",
+                callback_data="LDPE_Stretch_film_typematerial"),
+            InlineKeyboardButton(
+                text="Пленка ПВД",
+                callback_data="LDPE_film_typematerial"),
+            InlineKeyboardButton(
+                text="Крышки ПНД, ПВД, ПП",
+                callback_data="HDPE_LDPE_PP_covers_typematerial"),
+            InlineKeyboardButton(
+                text="Белые ПЭТ-бутылки от напитков",
+                callback_data="white_PET_bottles_from_drinks_typematerial"),
+            InlineKeyboardButton(
+                text="Пакеты фасовочные и пакеты-майки ПНД, ПВД",
+                callback_data="packing_packages_and_packagesTshirts_of_HDPE_LDPE_typematerial"),
+            InlineKeyboardButton(
+                text="ПЭТ-бутылки от напитков и растительного масла",
+                callback_data="PET_bottles_from_beverages_and_vegetable_oil_typematerial"),
+            InlineKeyboardButton(
+                text="Алюминиевые банки",
+                callback_data="aluminum_cans_typematerial")
+        ]
     ]
-])
+types_materials_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=types_materials_inline_buttons,
+                                resize_keyboard=True,
+                                one_time_keyboard=True,
+                                input_field_placeholder="Choice a button",
+                                selective=True)
+
 
 
 # Кнопки для интересных фактов
-interesting_facts_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
-    [
-        InlineKeyboardButton(
-            text="5 причин сортировать♻️"
-        ),
-        InlineKeyboardButton(
-            text="Куда направляются отходы на переработку♻️"
-        )
-    ]
-])
-
-
-'''def get_infography_keyboard():
-
-    # Кнопки для инфографии
-    infography_keyboard = InlineKeyboardMarkup(inline_keyboard=[
+interesting_facts_inline_buttons = [
         [
             InlineKeyboardButton(
-                text="Батарейки",
-                callback_data="somecallback"
-            )
-        ],
-        [
+                text="5 причин сортировать♻️",
+                callback_data="reasons_to_sort"),
             InlineKeyboardButton(
-                text="Бумага",
-                callback_data="somecallback"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="Композитная упаковка",
-                callback_data="somecallback"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="Металл",
-                callback_data="somecallback"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="Пластик",
-                callback_data="somecallback"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="Стекло",
-                callback_data="somecallback"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="Экологичность упаковки",
-                callback_data="somecallback"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="Что содержит мусорное ведро?",
-                callback_data="somecallback"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="Ответственное потребление",
-                callback_data="somecallback"
-            )
+                text="Куда направляются отходы на переработку♻️",
+                callback_data="where_the_waste_is_sent_for_recycling")
         ]
-    ], resize_keyboard=True, one_time_keyboard=True, input_field_placeholder="Choice a button", selective=True)
-
-    keyboard = types.InlineKeyboardMarkup(types_materials_inline_keyboard)
-    return keyboard'''
-
-
-def get_infography_keyboard():
-
-    # Кнопки для инфографии
-    infography_keyboard = InlineKeyboardMarkup(row_width=1,
-                                               resize_keyboard=True,
-                                               one_time_keyboard=True,
-                                               input_field_placeholder="Choice a button",
-                                               selective=True)
-
-    infography_keyboard.add(InlineKeyboardButton(text="Батарейки", url="https://www.youtube.com/"),
-                            InlineKeyboardButton(text="Бумага", url="https://www.youtube.com/"))
-
-    return infography_keyboard
-
-
-'''buttons = [
-        [
-            types.InlineKeyboardButton(text="-1", callback_data="num_decr"),
-            types.InlineKeyboardButton(text="+1", callback_data="num_incr")
-        ],
-        [types.InlineKeyboardButton(text="Подтвердить", callback_data="num_finish")]
     ]
-keyboard = types.InlineKeyboardMarkup(inline_keyboard=buttons)'''
-
+interesting_facts_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=interesting_facts_inline_buttons,
+                                resize_keyboard=True,
+                                one_time_keyboard=True,
+                                input_field_placeholder="Choice a button",
+                                selective=True)
 
 
 # Кнопки для инфографии
-infography_builder = InlineKeyboardBuilder()
-infography_builder.row(InlineKeyboardButton(
-    text="Батарейки",
-    callback_data="battery_infography")
-)
-infography_builder.row(InlineKeyboardButton(
-    text="Композитная упаковка",
-    callback_data="сomposite_package_infography")
-)
-infography_builder.row(InlineKeyboardButton(
-    text="Металл",
-    callback_data="metal_infography")
-)
-infography_builder.row(InlineKeyboardButton(
-    text="Пластик",
-    callback_data="plastic_infography")
-)
-infography_builder.row(InlineKeyboardButton(
-    text="Стекло",
-    callback_data="glass_infography")
-)
-infography_builder.row(InlineKeyboardButton(
-    text="Экологичность упаковки",
-    callback_data="environmental_friendliness_of_packaging_infography")
-)
-'''
-builder.row(InlineKeyboardButton(
-    text="Бумага",
-    callback_data="paper_infography")
-)
-builder.row(InlineKeyboardButton(
-    text="Что содержит мусорное ведро?",
-    callback_data="what_is_contain_bin_infography")
-)
-builder.row(InlineKeyboardButton(
-    text="Ответственное потребление",
-    callback_data="responsible_consumption_infography")
-)
-'''
+infography_buttons = [
+        [
+            InlineKeyboardButton(
+                text="Батарейки",
+                callback_data="battery_infography"),
+            InlineKeyboardButton(
+                text="Композитная упаковка",
+                callback_data="сomposite_package_infography"),
+            InlineKeyboardButton(
+                text="Металл",
+                callback_data="metal_infography"),
+            InlineKeyboardButton(
+                text="Пластик",
+                callback_data="plastic_infography"),
+            InlineKeyboardButton(
+                text="Стекло",
+                callback_data="glass_infography"),
+            InlineKeyboardButton(
+                text="Экологичность упаковки",
+                callback_data="environmental_friendliness_of_packaging_infography")
+        ]
+    ]
+infography_keyboard = InlineKeyboardMarkup(inline_keyboard=infography_buttons,
+                                resize_keyboard=True,
+                                one_time_keyboard=True,
+                                input_field_placeholder="Choice a button",
+                                selective=True)
