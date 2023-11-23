@@ -12,6 +12,11 @@ async def infografika(message: types.Message):
 @dp.callback_query(F.data == "battery_infography")
 async def battery(callback: types.CallbackQuery):
     await callback.message.answer_photo("AgACAgIAAxkBAAPEZV4UbksK2D8JqkjISv0GfxGHjyMAAvzRMRvhWfFKEo1qNoy4V5YBAAMCAANzAAMzBA")
+    '''
+    @dp.callback_query(F.data == "paper_infography")
+    async def paper(callback: types.CallbackQuery):
+        await callback.message.answer_photo("AgACAgIAAxkBAAOkZV7NLDIt692t4wre8yXQjGLuM0EAAqPXMRvu6fBKcc_TTR3SeocBAAMCAANzAAMzBA")
+    '''
 
 
 @dp.callback_query(F.data == "сomposite_package_infography")
@@ -41,10 +46,6 @@ async def environmental_friendliness_of_packaging(callback: types.CallbackQuery)
 
 
 '''
-@dp.callback_query(F.data == "paper_infography")
-async def paper(callback: types.CallbackQuery):
-    await callback.message.answer_photo("AgACAgIAAxkBAAOkZV7NLDIt692t4wre8yXQjGLuM0EAAqPXMRvu6fBKcc_TTR3SeocBAAMCAANzAAMzBA")
-
 @dp.callback_query(F.data == "what_is_contain_bin_infography")
 async def what_is_contain_bin(callback: types.CallbackQuery):
     await callback.message.answer_photo("AgACAgIAAxkBAAOxZV7R2KH7GmHgIP_sZi73HfHauSIAAq3XMRvu6fBKcMo08NIstu4BAAMCAANzAAMzBA")
