@@ -249,9 +249,9 @@ question2_keyboard = InlineKeyboardMarkup(inline_keyboard=question2_buttons,
 
 
 question1_buttons = []
-question1_keyboard = InlineKeyboardMarkup()
-question2_buttons = []
-question2_keyboard = InlineKeyboardMarkup()
+# question1_keyboard = InlineKeyboardMarkup()
+# question2_buttons = []
+# question2_keyboard = InlineKeyboardMarkup()
 
 list_buttons = [question1_buttons, question2_buttons]
 
