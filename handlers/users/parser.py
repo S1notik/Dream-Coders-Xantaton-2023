@@ -1,6 +1,8 @@
 import csv
 import requests
 from aiogram import F, types
+
+from keyboards.inline.inline_buttons import link_for_post_inline_keyboard
 from loader import dp
 import os
 
@@ -16,6 +18,7 @@ import os
 #
 #
 # file_writer(all_posts)
+
 
 
 @dp.message(F.text == "Посты")
@@ -38,4 +41,4 @@ async def pars(message: types.Message):
     data = response.json()
     for item in data['response']['items']:
         if item['post_type'] == 'post':
-            await message.answer(item['text'])
+            await message.answer(item['text'],reply_markup=link_for_post_inline_keyboard)
