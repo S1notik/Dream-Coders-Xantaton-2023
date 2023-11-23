@@ -140,7 +140,7 @@ ecolesson_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=ecolesson_butto
 
 
 # Кнопки для инфографии
-infography_buttons = [
+quetion1_buttons = [
         [
             InlineKeyboardButton(
                 text="Батарейки",
@@ -187,8 +187,109 @@ infography_buttons = [
                 callback_data="responsible_consumption_infography")
         ]
     ]
-infography_keyboard = InlineKeyboardMarkup(inline_keyboard=infography_buttons,
-                                resize_keyboard=True,
-                                one_time_keyboard=True,
-                                input_field_placeholder="Choice a button",
-                                selective=True)
+infography_keyboard = InlineKeyboardMarkup(inline_keyboard=quetion1_buttons,
+                                           resize_keyboard=True,
+                                           one_time_keyboard=True,
+                                           input_field_placeholder="Choice a button",
+                                           selective=True)
+
+
+
+
+# Кнопки для вопросов теста---------
+
+# Вопрос первый
+question1_buttons = [
+        [
+            InlineKeyboardButton(
+                text="Материал упаковки может быть переработан или упаковка частично/полностью сделана из вторсырья",
+                callback_data="answer1_question1_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Производитель уплатил лицензионный сбор и профинансировал сбор и сортировку отходов упаковки",
+                callback_data="answer2_question1_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Это экологически безопасный продукт",
+                callback_data="answer3_question1_quiz")
+        ]
+    ]
+question1_keyboard = InlineKeyboardMarkup(inline_keyboard=question1_buttons,
+                                           resize_keyboard=True,
+                                           one_time_keyboard=True,
+                                           input_field_placeholder="Choice a button",
+                                           selective=True)
+
+# Вопрос второй
+question2_buttons = [
+        [
+            InlineKeyboardButton(
+                text="Можно, и мыть необязательно",
+                callback_data="answer1_question2_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Можно, и мыть необязательно",
+                callback_data="answer2_question2_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Конечно, только предварительно его надо помыть",
+                callback_data="answer3_question2_quiz")
+        ]
+    ]
+question2_keyboard = InlineKeyboardMarkup(inline_keyboard=question2_buttons,
+                                           resize_keyboard=True,
+                                           one_time_keyboard=True,
+                                           input_field_placeholder="Choice a button",
+                                           selective=True)
+
+
+
+question1_buttons = []
+question1_keyboard = InlineKeyboardMarkup()
+question2_buttons = []
+question2_keyboard = InlineKeyboardMarkup()
+
+list_buttons = [question1_buttons, question2_buttons]
+
+file = open("data/text/quiz.txt", "r")
+lines = file.readlines()
+j = 1
+
+for i in range(2):
+    answers = lines[i].split("\\")[1].split("/")
+    list_buttons[i] = [
+        [
+            InlineKeyboardButton(
+                text=answers[0],
+                callback_data="answer1_question" + str(i) + "_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text=answers[1],
+                callback_data="answer2_question" + str(i) + "_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text=answers[2],
+                callback_data="answer3_question" + str(i) + "_quiz")
+        ]
+    ]
+
+
+
+
+question1_keyboard = InlineKeyboardMarkup(inline_keyboard=question1_buttons,
+                                           resize_keyboard=True,
+                                           one_time_keyboard=True,
+                                           input_field_placeholder="Choice a button",
+                                           selective=True)
+
+question2_keyboard = InlineKeyboardMarkup(inline_keyboard=question2_buttons,
+                                           resize_keyboard=True,
+                                           one_time_keyboard=True,
+                                           input_field_placeholder="Choice a button",
+                                           selective=True)
