@@ -251,6 +251,7 @@ question2_keyboard = InlineKeyboardMarkup(inline_keyboard=question2_buttons,
 question1_buttons = []
 question2_buttons = []
 
+
 list_buttons = [question1_buttons, question2_buttons]
 
 file = open("data/text/quiz.txt", "r")
