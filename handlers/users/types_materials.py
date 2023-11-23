@@ -1,6 +1,5 @@
 from aiogram import types
-from aiogram.filters import CommandStart
-from aiogram import Bot, Dispatcher, F
+from aiogram import F
 
 from keyboards.inline import types_materials_inline_keyboard
 from loader import dp

@@ -4,6 +4,7 @@ from .BasicRules import dp
 from .education import dp
 from .types_materials import dp
 from .infografika import dp
+from .interesting_facts import dp
 
 
 __all__ = ["dp"]
