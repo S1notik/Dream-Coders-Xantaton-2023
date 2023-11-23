@@ -1,12 +1,12 @@
 from aiogram import types, F
 
-from keyboards.inline.inline_buttons import get_infography_keyboard, infography_builder
+from keyboards.inline.inline_buttons import infography_keyboard
 from loader import dp
 
 
 @dp.message(F.text == "Инфографика📑")
 async def infografika(message: types.Message):
-    await message.answer("Здесь вы можете узнать о переработке разных материалов", reply_markup=infography_builder.as_markup())
+    await message.answer("Здесь вы можете узнать о переработке разных материалов", reply_markup=infography_keyboard)
 
 @dp.callback_query(F.data == "battery_infography")
 async def battery(callback: types.CallbackQuery):
