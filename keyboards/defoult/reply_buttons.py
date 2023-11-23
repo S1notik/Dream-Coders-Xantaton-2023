@@ -52,7 +52,7 @@ education_keyboard = ReplyKeyboardMarkup(keyboard=[
             text="Полезные ссылки🔗"
         ),
         KeyboardButton(
-            text="Мини-игра🏆"
+            text="Тест🏆"
         )
     ],
     [
