@@ -126,6 +126,21 @@ interesting_facts_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=interes
                                 input_field_placeholder="Choice a button",
                                 selective=True)
 
+# Кнопки для Экоурока
+ecolesson_buttons = [
+        [
+            InlineKeyboardButton(
+                text="Записаться на Экоурок♻️",
+                url="https://sobiraet.yugra-ecology.ru/form"),
+        ]
+]
+ecolesson_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=ecolesson_buttons,
+                                resize_keyboard=True,
+                                one_time_keyboard=True,
+                                input_field_placeholder="Choice a button",
+                                selective=True)
+
+
 
 # Кнопки для инфографии
 infography_buttons = [
