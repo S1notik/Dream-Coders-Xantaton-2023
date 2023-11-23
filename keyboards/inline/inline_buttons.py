@@ -6,7 +6,7 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 
 # Кнопки для полезных ссылок
-useful_links_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
+useful_links_buttons = [
     [
         InlineKeyboardButton(
             text="Как собирать отходы♻️",
@@ -19,19 +19,24 @@ useful_links_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
     ],
     [
         InlineKeyboardButton(
-            text="Наш ВКонтакте👀",
+            text="ВКонтакте👀",
             url="https://vk.com/eco4u2"
         ),
         InlineKeyboardButton(
-            text="Наш Телеграмм🕊️",
+            text="Телеграмм🕊️",
             url="https://t.me/yugraecology"
         ),
         InlineKeyboardButton(
-            text="Наш Одноклассники👋",
+            text="Одноклассники👋",
             url="https://ok.ru/group/55933980573950"
         ),
     ]
-])
+]
+useful_links_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=useful_links_buttons,
+                                resize_keyboard=True,
+                                one_time_keyboard=True,
+                                input_field_placeholder="Choice a button",
+                                selective=True)
 
 
 
