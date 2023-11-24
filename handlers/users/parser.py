@@ -9,7 +9,7 @@ from lxml import etree
 
 
 
-@dp.message(F.text == "Посты")
+@dp.message(F.text == "Посты📰")
 async def pars(message: types.Message, bot: Bot):
     SECRET_TOKEN = str(os.getenv("SECRET_TOKEN"))
     version = 5.137

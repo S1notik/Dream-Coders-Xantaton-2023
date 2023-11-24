@@ -16,6 +16,9 @@ start_keyboard = ReplyKeyboardMarkup(keyboard=[
         ),
         KeyboardButton(
             text="Обучающие материалы📚"
+        ),
+        KeyboardButton(
+            text="Посты📰"
         )
     ]
 ], resize_keyboard=True, one_time_keyboard=True, input_field_placeholder="Choice a button", selective=True)

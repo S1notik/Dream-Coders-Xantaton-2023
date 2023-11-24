@@ -153,7 +153,6 @@ ecolesson_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=ecolesson_butto
                                 selective=True)
 
 
-
 # Кнопки для инфографии
 quetion1_buttons = [
         [
