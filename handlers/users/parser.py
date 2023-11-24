@@ -1,4 +1,4 @@
-#import requests
+import requests
 #from bs4 import BeautifulSoup as BS
 from aiogram import F, types, Bot
 from keyboards.inline import link_for_post_inline_keyboard
