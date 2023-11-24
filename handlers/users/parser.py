@@ -1,11 +1,11 @@
-import requests
-from bs4 import BeautifulSoup as BS
+#import requests
+#from bs4 import BeautifulSoup as BS
 from aiogram import F, types, Bot
 from keyboards.inline import link_for_post_inline_keyboard
 from loader import dp
 import os
-from lxml.etree import ParserError
-from lxml import etree
+#from lxml.etree import ParserError
+#from lxml import etree
 
 
 
@@ -32,18 +32,21 @@ async def pars(message: types.Message, bot: Bot):
 
 
 
-'''@dp.message(F.text == "Посты")
+'''@dp.message(F.text == "Посты📰")
 async def pars(message: types.Message, bot: Bot):
     if message.from_user.id == 1649811196:
         url = "https://vk.com/eco4u2"
         response = requests.get(url).text
         soup = BS(response, features="html.parser")
-        posts = soup.find(id="page_wall_posts")
-        print(posts)
-        html_doc = responce.content
+        posts = soup.find(id="page_wrap")
+
+        response = requests.get(url)
+        html_doc = response.text
         html_dom = parse_html_doc(html_doc)
-        posts = html_dom.xpath("//*[@id=\"page_wall_posts\"]")
-        print(len(posts))
+        posts = html_dom.xpath("/html/body")
+
+
+        print(posts)
         current_num_of_posts = 0
 
         #while True:
