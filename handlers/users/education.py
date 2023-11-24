@@ -278,8 +278,6 @@ async def question8(callback: types.CallbackQuery):
 
 
 # Обработка ответов на девятый вопрос ------------------------------------
-question9 = "Следующий вопрос:\n" \
-            "Какая упаковка яиц менее вредна для экологии?"
 
 @dp.callback_query(F.data == "answer1_question9_quiz")
 async def question9(callback: types.CallbackQuery):
@@ -309,8 +307,6 @@ async def question9(callback: types.CallbackQuery):
 
 
 # Обработка ответов на десятый вопрос ------------------------------------
-question10 = "Поздравляю!🎉 Вы полностью прошли тест🎊\n\n" \
-           "Надеюсь, вы узнали для себя что-то новое😄"
 
 @dp.callback_query(F.data == "answer1_question10_quiz")
 async def question10(callback: types.CallbackQuery):
