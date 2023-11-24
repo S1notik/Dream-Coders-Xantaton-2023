@@ -153,7 +153,6 @@ ecolesson_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=ecolesson_butto
                                 selective=True)
 
 
-
 # Кнопки для инфографии
 quetion1_buttons = [
         [
@@ -210,7 +209,7 @@ infography_keyboard = InlineKeyboardMarkup(inline_keyboard=quetion1_buttons,
 
 
 
-# Кнопки для вопросов теста---------
+# Кнопки для вопросов теста-----------------------
 
 # Вопрос первый
 question1_buttons = [
@@ -236,6 +235,7 @@ question1_keyboard = InlineKeyboardMarkup(inline_keyboard=question1_buttons,
                                            input_field_placeholder="Choice a button",
                                            selective=True)
 
+
 # Вопрос второй
 question2_buttons = [
         [
@@ -260,31 +260,205 @@ question2_keyboard = InlineKeyboardMarkup(inline_keyboard=question2_buttons,
                                            input_field_placeholder="Choice a button",
                                            selective=True)
 
+
 # Вопрос третий
-question2_buttons = [
+question3_buttons = [
         [
             InlineKeyboardButton(
-                text="Можно, и мыть необязательно",
-                callback_data="answer1_question2_quiz")
+                text="Долг останется только за тем, кто допустил просрочку платежа",
+                callback_data="answer1_question3_quiz")
         ],
         [
             InlineKeyboardButton(
-                text="Можно, и мыть необязательно",
-                callback_data="answer2_question2_quiz")
+                text="Долг распределят между всеми жильцами дома",
+                callback_data="answer2_question3_quiz")
         ],
         [
             InlineKeyboardButton(
-                text="Конечно, только предварительно его надо помыть",
-                callback_data="answer3_question2_quiz")
+                text="Долг распределят между всеми жильцами подъезда",
+                callback_data="answer3_question3_quiz")
         ]
     ]
-question2_keyboard = InlineKeyboardMarkup(inline_keyboard=question2_buttons,
+question3_keyboard = InlineKeyboardMarkup(inline_keyboard=question3_buttons,
                                            resize_keyboard=True,
                                            one_time_keyboard=True,
                                            input_field_placeholder="Choice a button",
                                            selective=True)
 
 
+# Вопрос четвертый
+question4_buttons = [
+        [
+            InlineKeyboardButton(
+                text="Обычно я покупаю пластиковые тарелки, стаканы и вилки.",
+                callback_data="answer1_question4_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Обычно я во время прогулок на природе не ем.",
+                callback_data="answer2_question4_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Обычно я беру тарелки и стаканы из дома, чтобы после прогулки помыть их на кухне.",
+                callback_data="answer3_question4_quiz")
+        ]
+    ]
+question4_keyboard = InlineKeyboardMarkup(inline_keyboard=question4_buttons,
+                                           resize_keyboard=True,
+                                           one_time_keyboard=True,
+                                           input_field_placeholder="Choice a button",
+                                           selective=True)
+
+
+# Вопрос пятый
+question5_buttons = [
+        [
+            InlineKeyboardButton(
+                text="Только хозяин квартиры на правах собственника",
+                callback_data="answer1_question5_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="В зависимости от договоренностей хозяина и арендатора",
+                callback_data="answer2_question5_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Только тот, кто снимает жилье",
+                callback_data="answer3_question5_quiz")
+        ]
+    ]
+question5_keyboard = InlineKeyboardMarkup(inline_keyboard=question5_buttons,
+                                           resize_keyboard=True,
+                                           one_time_keyboard=True,
+                                           input_field_placeholder="Choice a button",
+                                           selective=True)
+
+
+# Вопрос шестой
+question6_buttons = [
+        [
+            InlineKeyboardButton(
+                text="Я каждый день покупаю 1,5 литровую бутылку питьевой воды.",
+                callback_data="answer1_question6_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Я каждое утро беру с собой термос с питьевой водой.",
+                callback_data="answer2_question6_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Я обычно за день могу купить 5 или 6 бутылок с разными напитками по 0,3 литра.",
+                callback_data="answer3_question6_quiz")
+        ]
+    ]
+question6_keyboard = InlineKeyboardMarkup(inline_keyboard=question6_buttons,
+                                           resize_keyboard=True,
+                                           one_time_keyboard=True,
+                                           input_field_placeholder="Choice a button",
+                                           selective=True)
+
+
+# Вопрос седьмой
+question7_buttons = [
+        [
+            InlineKeyboardButton(
+                text="В офис агентов по расчетно-кассовому обслуживанию",
+                callback_data="answer1_question7_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="В офис АО «Югра-Экология»",
+                callback_data="answer2_question7_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="В офис своей управляющей компании",
+                callback_data="answer3_question7_quiz")
+        ]
+    ]
+question7_keyboard = InlineKeyboardMarkup(inline_keyboard=question7_buttons,
+                                           resize_keyboard=True,
+                                           one_time_keyboard=True,
+                                           input_field_placeholder="Choice a button",
+                                           selective=True)
+
+
+# Вопрос восьмой
+question8_buttons = [
+        [
+            InlineKeyboardButton(
+                text="Светодиодные лампочки",
+                callback_data="answer1_question8_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Консервные банки",
+                callback_data="answer2_question8_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Батарейки",
+                callback_data="answer3_question8_quiz")
+        ]
+    ]
+question8_keyboard = InlineKeyboardMarkup(inline_keyboard=question8_buttons,
+                                           resize_keyboard=True,
+                                           one_time_keyboard=True,
+                                           input_field_placeholder="Choice a button",
+                                           selective=True)
+
+
+# Вопрос девятый
+question9_buttons = [
+        [
+            InlineKeyboardButton(
+                text="Полиэтиленовый пакет",
+                callback_data="answer1_question9_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Полиэтиленовый пакет",
+                callback_data="answer2_question9_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Железная консервная банка",
+                callback_data="answer3_question9_quiz")
+        ]
+    ]
+question9_keyboard = InlineKeyboardMarkup(inline_keyboard=question9_buttons,
+                                           resize_keyboard=True,
+                                           one_time_keyboard=True,
+                                           input_field_placeholder="Choice a button",
+                                           selective=True)
+
+
+# Вопрос десятый
+question10_buttons = [
+        [
+            InlineKeyboardButton(
+                text="Упаковка из прессованной макулатуры",
+                callback_data="answer1_question10_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Упаковка из пластика",
+                callback_data="answer2_question10_quiz")
+        ],
+        [
+            InlineKeyboardButton(
+                text="Упаковка из вспененного полистирола",
+                callback_data="answer3_question10_quiz")
+        ]
+    ]
+question10_keyboard = InlineKeyboardMarkup(inline_keyboard=question10_buttons,
+                                           resize_keyboard=True,
+                                           one_time_keyboard=True,
+                                           input_field_placeholder="Choice a button",
+                                           selective=True)
 
 
 '''
