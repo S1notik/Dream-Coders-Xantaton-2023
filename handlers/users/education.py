@@ -47,196 +47,196 @@ async def start_test_question1(message: types.Message):
 
 
 # Обработка ответов на первый вопрос ------------------------------------
-question = "Следующий вопрос:\n" \
+question1 = "Следующий вопрос:\n" \
            "Можно ли класть одноразовый стаканчик из-под кофе в контейнер для бумаги?"
 
 @dp.callback_query(F.data == "answer1_question1_quiz")
 async def question1(callback: types.CallbackQuery):
-    await callback.message.answer("Верно!\n\n" + question,
+    await callback.message.answer("Верно!\n\n" + question1,
                          reply_markup=question2_keyboard)
 
 @dp.callback_query(F.data == "answer2_question1_quiz")
 async def question1(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question,
+    await callback.message.answer("Неверно!\n\n" + question1,
                          reply_markup=question2_keyboard)
 
 @dp.callback_query(F.data == "answer3_question1_quiz")
 async def question1(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question,
+    await callback.message.answer("Неверно!\n\n" + question1,
                          reply_markup=question2_keyboard)
 
 
 # Обработка ответов на второй вопрос ------------------------------------
-question = "Следующий вопрос:\n" \
+question2 = "Следующий вопрос:\n" \
            "Если кто-то из жильцов не платит за мусор, то..."
 @dp.callback_query(F.data == "answer1_question2_quiz")
 async def question2(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question,
+    await callback.message.answer("Неверно!\n\n" + question2,
                          reply_markup=question3_keyboard)
 
 @dp.callback_query(F.data == "answer2_question2_quiz")
 async def question2(callback: types.CallbackQuery):
-    await callback.message.answer("Верно!\n\n" + question,
+    await callback.message.answer("Верно!\n\n" + question2,
                          reply_markup=question3_keyboard)
 
 @dp.callback_query(F.data == "answer3_question2_quiz")
 async def question2(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question,
+    await callback.message.answer("Неверно!\n\n" + question2,
                          reply_markup=question3_keyboard)
 
 
 # Обработка ответов на третий вопрос ------------------------------------
-question = "Следующий вопрос:\n" \
+question3 = "Следующий вопрос:\n" \
             "Какую посуду ты берешь для отдыха на природе?"
 
 @dp.callback_query(F.data == "answer1_question3_quiz")
 async def question3(callback: types.CallbackQuery):
-    await callback.message.answer("Верно!\n\n" + question,
+    await callback.message.answer("Верно!\n\n" + question3,
                          reply_markup=question4_keyboard)
 
 @dp.callback_query(F.data == "answer2_question3_quiz")
 async def question3(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question,
+    await callback.message.answer("Неверно!\n\n" + question3,
                          reply_markup=question4_keyboard)
 
 @dp.callback_query(F.data == "answer3_question3_quiz")
 async def question3(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question,
+    await callback.message.answer("Неверно!\n\n" + question3,
                          reply_markup=question4_keyboard)
 
 
 # Обработка ответов на четвертый вопрос ------------------------------------
-question = "Следующий вопрос:\n" \
+question4 = "Следующий вопрос:\n" \
             "Ты снимаешь квартиру. Кто должен платить за вывоз мусора?"
 
 @dp.callback_query(F.data == "answer1_question4_quiz")
 async def question4(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question,
+    await callback.message.answer("Неверно!\n\n" + question4,
                          reply_markup=question5_keyboard)
 
 @dp.callback_query(F.data == "answer2_question4_quiz")
 async def question4(callback: types.CallbackQuery):
-    await callback.message.answer("Верно!\n\n" + question,
+    await callback.message.answer("Верно!\n\n" + question4,
                          reply_markup=question5_keyboard)
 
 @dp.callback_query(F.data == "answer3_question4_quiz")
 async def question4(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question,
+    await callback.message.answer("Неверно!\n\n" + question4,
                          reply_markup=question5_keyboard)
 
 
 # Обработка ответов на пятый вопрос ------------------------------------
-question = "Следующий вопрос:\n" \
+question5 = "Следующий вопрос:\n" \
             "Сколько воды ты выпиваешь за день?"
 
 @dp.callback_query(F.data == "answer1_question5_quiz")
 async def question5(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question,
+    await callback.message.answer("Неверно!\n\n" + question5,
                          reply_markup=question6_keyboard)
 
 @dp.callback_query(F.data == "answer2_question5_quiz")
 async def question5(callback: types.CallbackQuery):
-    await callback.message.answer("Верно!\n\n" + question,
+    await callback.message.answer("Верно!\n\n" + question5,
                          reply_markup=question6_keyboard)
 
 @dp.callback_query(F.data == "answer3_question5_quiz")
 async def question5(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question,
+    await callback.message.answer("Неверно!\n\n" + question5,
                          reply_markup=question6_keyboard)
 
 
 # Обработка ответов на шестой вопрос ------------------------------------
-question = "Следующий вопрос:\n" \
+question6 = "Следующий вопрос:\n" \
             "Куда следует приносить документы для перерасчета?"
 
 @dp.callback_query(F.data == "answer1_question6_quiz")
 async def question6(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question,
+    await callback.message.answer("Неверно!\n\n" + question6,
                          reply_markup=question7_keyboard)
 
 @dp.callback_query(F.data == "answer2_question6_quiz")
 async def question6(callback: types.CallbackQuery):
-    await callback.message.answer("Верно!\n\n" + question,
+    await callback.message.answer("Верно!\n\n" + question6,
                          reply_markup=question7_keyboard)
 
 @dp.callback_query(F.data == "answer3_question6_quiz")
 async def question6(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question,
+    await callback.message.answer("Неверно!\n\n" + question6,
                          reply_markup=question7_keyboard)
 
 
 # Обработка ответов на седьмой вопрос ------------------------------------
-question = "Следующий вопрос:\n" \
+question7 = "Следующий вопрос:\n" \
             "Какие из этих предметов опасно выбрасывать в обычное мусорное ведро?"
 
 @dp.callback_query(F.data == "answer1_question7_quiz")
 async def question7(callback: types.CallbackQuery):
-    await callback.message.answer("Верно!\n\n" + question,
+    await callback.message.answer("Верно!\n\n" + question7,
                          reply_markup=question8_keyboard)
 
 @dp.callback_query(F.data == "answer2_question7_quiz")
 async def question7(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question,
+    await callback.message.answer("Неверно!\n\n" + question7,
                          reply_markup=question8_keyboard)
 
 @dp.callback_query(F.data == "answer3_question7_quiz")
 async def question7(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question,
+    await callback.message.answer("Неверно!\n\n" + question7,
                          reply_markup=question8_keyboard)
 
 
 # Обработка ответов на восьмой вопрос ------------------------------------
-question = "Следующий вопрос:\n" \
+question8 = "Следующий вопрос:\n" \
             "Что из оставленного туристами в лесу быстрее разложится?"
 
 @dp.callback_query(F.data == "answer1_question8_quiz")
 async def question8(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question,
+    await callback.message.answer("Неверно!\n\n" + question8,
                          reply_markup=question9_keyboard)
 
 @dp.callback_query(F.data == "answer2_question8_quiz")
 async def question8(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question,
+    await callback.message.answer("Неверно!\n\n" + question8,
                          reply_markup=question9_keyboard)
 
 @dp.callback_query(F.data == "answer3_question8_quiz")
 async def question8(callback: types.CallbackQuery):
-    await callback.message.answer("Верно!\n\n" + question,
+    await callback.message.answer("Верно!\n\n" + question8,
                          reply_markup=question9_keyboard)
 
 
 # Обработка ответов на девятый вопрос ------------------------------------
-question = "Следующий вопрос:\n" \
+question9 = "Следующий вопрос:\n" \
             "Какая упаковка яиц менее вредна для экологии?"
 
 @dp.callback_query(F.data == "answer1_question9_quiz")
 async def question9(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question,
+    await callback.message.answer("Неверно!\n\n" + question9,
                          reply_markup=question10_keyboard)
 
 @dp.callback_query(F.data == "answer2_question9_quiz")
 async def question9(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question,
+    await callback.message.answer("Неверно!\n\n" + question9,
                          reply_markup=question10_keyboard)
 
 @dp.callback_query(F.data == "answer3_question9_quiz")
 async def question9(callback: types.CallbackQuery):
-    await callback.message.answer("Верно!\n\n" + question,
+    await callback.message.answer("Верно!\n\n" + question9,
                          reply_markup=question10_keyboard)
 
 
 # Обработка ответов на десятый вопрос ------------------------------------
-question = "Поздравляю!🎉 Вы полностью прошли тест🎊\n\n" \
+question10 = "Поздравляю!🎉 Вы полностью прошли тест🎊\n\n" \
            "Надеюсь, вы узнали для себя что-то новое😄"
 
 @dp.callback_query(F.data == "answer1_question10_quiz")
 async def question10(callback: types.CallbackQuery):
-    await callback.message.answer("Верно!\n\n" + question)
+    await callback.message.answer("Верно!\n\n" + question10)
 
 @dp.callback_query(F.data == "answer2_question10_quiz")
 async def question10(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question)
+    await callback.message.answer("Неверно!\n\n" + question10)
 
 @dp.callback_query(F.data == "answer3_question10_quiz")
 async def question10(callback: types.CallbackQuery):
-    await callback.message.answer("Неверно!\n\n" + question)
+    await callback.message.answer("Неверно!\n\n" + question10)
