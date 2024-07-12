@@ -3,9 +3,9 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, KeyboardButtonPol
 # Кнопки для главного меню
 start_keyboard = ReplyKeyboardMarkup(keyboard=[
     [
-        KeyboardButton(
-            text="Пункты сбора♻️"
-        ),
+        # KeyboardButton(
+        #     text="Пункты сбора♻️"
+        # ),
         KeyboardButton(
             text="Правила приёма📃"
         ),
@@ -22,10 +22,11 @@ start_keyboard = ReplyKeyboardMarkup(keyboard=[
         ),
         KeyboardButton(
             text="Обучающие материалы📚"
-        ),
-        KeyboardButton(
-            text="Посты📰"
         )
+        # ,
+        # KeyboardButton(
+        #     text="Посты📰"
+        # )
     ]
 ], one_time_keyboard=True, input_field_placeholder="Choice a button", selective=True)
 
@@ -53,21 +54,21 @@ towns_keyboard = ReplyKeyboardMarkup(keyboard=[
 
 # Кнопки для обучающих материалов
 education_keyboard = ReplyKeyboardMarkup(keyboard=[
+    # [
+    #     KeyboardButton(
+    #         text="Инфографика📑"
+    #     ),
+    #     KeyboardButton(
+    #         text="Полезные ссылки🔗"
+    #     ),
+    #     KeyboardButton(
+    #         text="Тест🏆"
+    #     )
+    # ],
     [
-        KeyboardButton(
-            text="Инфографика📑"
-        ),
-        KeyboardButton(
-            text="Полезные ссылки🔗"
-        ),
-        KeyboardButton(
-            text="Тест🏆"
-        )
-    ],
-    [
-        KeyboardButton(
-            text="Экоурок🏫"
-        ),
+        # KeyboardButton(
+        #     text="Экоурок🏫"
+        # ),
         KeyboardButton(
             text="Интересные факты⭐️"
         )

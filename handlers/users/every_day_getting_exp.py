@@ -2,7 +2,6 @@ import sqlite3
 import time
 from aiogram import types, F
 import datetime
-from handlers.users.education import score_for_questions
 from loader import dp
 import aioschedule
 import asyncio
@@ -22,7 +21,8 @@ async def taking_daily(message: types.Message):
     is_daily_exp_was_got = cur.execute("""SELECT daily FROM users WHERE id = ?""", (message.from_user.id,)).fetchone()[0]
 
     if is_daily_exp_was_got != True:
-        await score_for_questions(message.from_user.id)
+        # Здесь прсчитывается тест, но я уже в душе не чаю зачем
+        #await score_for_questions(message.from_user.id)
         cur.execute(f"""UPDATE users SET daily={True} WHERE id={message.from_user.id}""")
         await message.answer("✅Вы получали 10 опыта!")
         await timer(message.from_user.id)
