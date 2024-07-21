@@ -6,13 +6,13 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 useful_links_buttons = [
     [
         InlineKeyboardButton(
-            text="Телеграмм👀",
+            text="Телеграмм🕊️",
             url="https://t.me/S1notik",
 
         ),
         InlineKeyboardButton(
-            text="Телеграмм🕊️",
-            url="https://t.me/newmrpotato"
+            text="Discord💬",
+            url="https://discord.gg/BGVGCcnx"
         ),
     ]
 ]

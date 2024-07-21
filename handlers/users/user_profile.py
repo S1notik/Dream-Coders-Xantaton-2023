@@ -5,15 +5,17 @@ from loader import dp
 
 ranks = ["Новичок", "Опытный", "Ветеран", "Мастер", "Легенда"]
 
+
 @dp.message(F.text == "Профиль👤")
 async def education(message: types.Message):
-    con = sqlite3.connect("data/database/information_about_companies.db")
-    # Создание курсора
-    cur = con.cursor()
-    current_score = cur.execute("""SELECT score FROM users WHERE id = ?""", (str(message.from_user.id),)).fetchone()[0]
-    con.commit()
-    con.close()
+    # con = sqlite3.connect("data/database/information_about_companies.db")
+    # # Создание курсора
+    # cur = con.cursor()
+    # current_score = cur.execute("""SELECT score FROM users WHERE id = ?""", (str(message.from_user.id),)).fetchone()[0]
+    # con.commit()
+    # con.close()
 
+    current_score = 1
     rank = ""
 
     if 0 <= current_score//100 <= 4:

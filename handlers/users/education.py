@@ -4,15 +4,9 @@ from aiogram.types import FSInputFile
 from keyboards.inline import *
 from loader import dp
 from keyboards.defoult.reply_buttons import education_keyboard
-from keyboards.inline import question1_keyboard, question2_keyboard
+#from keyboards.inline import question1_keyboard, question2_keyboard
 import time
-import sqlite3
 
-
-con = sqlite3.connect("data/database/information_about_companies.db")
-cur = con.cursor()
-id = count = 0
-main_flag = False
 
 
 @dp.message(F.text == "Обучающие материалы📚")
@@ -24,5 +18,5 @@ async def education(message: types.Message):
 # Useful links and video lessons
 @dp.message(F.text == "Соц-Сети разработчиков🔗")
 async def education(message: types.Message):
-    await message.answer("Вот они):",
+    await message.answer("Вот соц-сети, через которые вы можете связаться с разработчиками🙂",
                          reply_markup=useful_links_inline_keyboard)

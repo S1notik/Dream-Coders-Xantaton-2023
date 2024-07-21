@@ -33,11 +33,10 @@ start_keyboard = ReplyKeyboardMarkup(keyboard=[
 
 # Кнопки для обучающих материалов
 education_keyboard = ReplyKeyboardMarkup(keyboard=[
-        KeyboardButton(
-            text="Полезные ссылки🔗"
-        ),
     [
-
+        KeyboardButton(
+            text="Соц-Сети разработчиков🔗"
+        ),
         KeyboardButton(
             text="Интересные факты⭐️"
         )
